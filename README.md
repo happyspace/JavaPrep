@@ -3,7 +3,7 @@
 A program that creates a number of threads each of which counts by a that number.
 The results are displayed in the order assigned to the threads. 
 
-Program takes on argument the number of threads/(count by number).
+Program takes one argument the number of threads/(count by number).
 
 To run the program clone this repository cd into the directory 
 and run the following command. 
