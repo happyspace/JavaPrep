@@ -65,7 +65,7 @@ public class ParallelCounting {
                     shutdown);
             tasks.add(countingTask);
             Thread thread = new Thread(countingTask);
-            thread.setName("th" + String.valueOf(i + 1));
+            thread.setName("th " + String.valueOf(i + 1));
             threads.add(thread);
             thread.start();
         }
