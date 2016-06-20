@@ -86,7 +86,7 @@ public class ParallelCounting {
             this.resultsQueue = resultsQueue;
             this.threadNum = threadNum;
         }
-        // just report the results from the ge
+        // just report the results from the last generation.
         public void run() {
             // tread ids are one based.
             CountResult[] order = new CountResult[threadNum + 1];
