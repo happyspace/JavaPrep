@@ -65,7 +65,7 @@ public class ParallelCounting {
                     shutdown);
             tasks.add(countingTask);
             Thread thread = new Thread(countingTask);
-            thread.setName("th" + String.valueOf(i + 1));
+            thread.setName("th " + String.valueOf(i + 1));
             threads.add(thread);
             thread.start();
         }
@@ -86,7 +86,7 @@ public class ParallelCounting {
             this.resultsQueue = resultsQueue;
             this.threadNum = threadNum;
         }
-        // just report the results from the ge
+        // just report the results from the last generation.
         public void run() {
             // tread ids are one based.
             CountResult[] order = new CountResult[threadNum + 1];
