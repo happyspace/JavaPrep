@@ -23,10 +23,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="prep" />
+        <module name="JavaPrep" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="JavaPrep" target="1.8" />
       <module name="prep" target="1.8" />
       <module name="Prep" target="1.5" />
     </bytecodeTargetLevel>
