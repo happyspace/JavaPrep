@@ -25,14 +25,23 @@ public class Trie {
 
     List<Map<Character, Integer>> buildTrie(String[] patterns) {
         List<Map<Character, Integer>> trie = new ArrayList<Map<Character, Integer>>();
-
+        Map<Character, Integer> first = new HashMap<>();
+        trie.add(first);
         // write your code here
         for (String pattern : patterns) {
+            Map<Character, Integer> current = trie.get(0);
             for (int i = 0; i < pattern.length(); i++) {
-
+                Character c = pattern.charAt(i);
+                if (current.containsKey(c)) {
+                    current = trie.get(current.get(c));
+                } else {
+                    Map<Character, Integer> nn = new HashMap<>();
+                    trie.add(nn);
+                    current.put(c, trie.size() - 1);
+                    current = nn;
+                }
             }
         }
-
         return trie;
     }
 
